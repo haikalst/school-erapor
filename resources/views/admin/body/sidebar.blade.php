@@ -9,28 +9,64 @@ $route = Route::current()->getName();
             <ul class="nav navbar-nav">
                 <li class="menu-title">Menu Utama</li>
                 <li class="{{ $route == 'dashboard' ? 'active' : '' }}">
-                    <a href="{{ route('dashboard') }}"><i class="menu-icon fa fa-laptop"></i>Beranda</a>
+                    <a href="{{ route('dashboard') }}"><i class="menu-icon fa fa-home"></i>Beranda</a>
                 </li>
                 <li class="menu-item-has-children dropdown {{ $prefix == '/users' ? 'active' : '' }}">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
-                        aria-expanded="false"> <i class="menu-icon fa fa-cogs"></i>Pengguna</a>
+                        aria-expanded="false"> <i class="menu-icon fa fa-users"></i>Pengguna</a>
                     <ul class="sub-menu children dropdown-menu">
-                        <li><i class="fa fa-puzzle-piece"></i><a href="{{ route('user.view') }}">&nbsp; Lihat
+                        <li><i class="fa fa-user"></i><a href="{{ route('user.view') }}">&nbsp; Lihat
                                 Pengguna</a>
                         </li>
-                        <li><i class="fa fa-id-badge"></i><a href="{{ route('user.add') }}">&nbsp; Tambah Pengguna</a>
+                        <li><i class="fa fa-user-plus"></i><a href="{{ route('user.add') }}">&nbsp; Tambah Pengguna</a>
                         </li>
                     </ul>
                 </li>
                 <li class="menu-item-has-children dropdown {{ $prefix == '/profile' ? 'active' : '' }}">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
-                        aria-expanded="false"> <i class="menu-icon fa fa-cogs"></i>Profil</a>
+                        aria-expanded="false"> <i class="menu-icon fa fa-user-circle-o"></i>Profil</a>
                     <ul class="sub-menu children dropdown-menu">
-                        <li><i class="fa fa-puzzle-piece"></i><a href="{{ route('profile.view') }}">&nbsp; Lihat
+                        <li><i class="fa fa-id-badge"></i><a href="{{ route('profile.view') }}">&nbsp; Lihat
                                 Profil</a>
                         </li>
-                        <li><i class="fa fa-id-badge"></i><a href="{{ route('password.view') }}">&nbsp; Ubah
+                        <li><i class="fa fa-key"></i><a href="{{ route('password.view') }}">&nbsp; Ubah
                                 Password</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu-item-has-children dropdown {{ $prefix == '/setup' ? 'active' : '' }}">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false"> <i class="menu-icon fa fa-building"></i>Manajemen Sekolah</a>
+                    <ul class="sub-menu children dropdown-menu">
+                        <li><i class="fa fa-graduation-cap"></i><a href="{{ route('student.class.view') }}">&nbsp; Data
+                                Kelas</a>
+                        </li>
+                        <li><i class="fa fa-calendar-o"></i><a href="{{ route('student.year.view') }}">&nbsp; Data
+                                Tahun Ajaran</a>
+                        </li>
+                        <li><i class="fa fa-bookmark"></i><a href="{{ route('student.group.view') }}">&nbsp; Data
+                                Grup</a>
+                        </li>
+                        <li><i class="fa fa-clock-o"></i><a href="{{ route('student.shift.view') }}">&nbsp; Data
+                                Shift</a>
+                        </li>
+                        <li><i class="fa fa-credit-card"></i><a href="{{ route('fee.category.view') }}">&nbsp;
+                                Pembayaran</a>
+                        </li>
+                        <li><i class="fa fa-credit-card"></i><a href="{{ route('fee.amount.view') }}">&nbsp;
+                                Harga Bayar</a>
+                        </li>
+                        <li><i class="fa fa-book"></i><a href="{{ route('exam.type.view') }}">&nbsp;
+                                Tipe Ujian</a>
+                        </li>
+                        <li><i class="fa fa-book"></i><a href="{{ route('school.subject.view') }}">&nbsp;
+                                Mata Pelajaran</a>
+                        </li>
+                        <li><i class="fa fa-book"></i><a href="{{ route('assign.subject.view') }}">&nbsp;
+                                Nilai Mata Pelajaran</a>
+                        </li>
+                        <li><i class="fa fa-book"></i><a href="{{ route('designation.view') }}">&nbsp;
+                                Posisi</a>
                         </li>
                     </ul>
                 </li>

@@ -1,8 +1,10 @@
 <header id="header" class="header">
     <div class="top-left">
         <div class="navbar-header">
-            <a class="navbar-brand" href="./"><img src="{{ asset('images/logo.png') }}" alt="Logo"></a>
-            <a class="navbar-brand hidden" href="./"><img src="{{ asset('images/logo2.png') }}" alt="Logo"></a>
+            <a class="navbar-brand" href="{{ route('dashboard') }}"><img src="{{ asset('images/logo.png') }}"
+                    alt="Logo"></a>
+            <a class="navbar-brand hidden" href="{{ route('dashboard') }}"><img src="{{ asset('images/logo2.png') }}"
+                    alt="Logo"></a>
             <a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a>
         </div>
     </div>
@@ -103,12 +105,13 @@
                 <div class="user-menu dropdown-menu">
                     <a class="nav-link" href="{{ route('profile.view') }}"><i class="fa fa- user"></i>Profil</a>
 
-                    <a class="nav-link" href="#"><i class="fa fa- user"></i>Notifications <span
+                    <a class="nav-link" href="#"><i class="fa fa- user"></i>Notifikasi <span
                             class="count">13</span></a>
 
-                    <a class="nav-link" href="#"><i class="fa fa -cog"></i>Settings</a>
+                    <a class="nav-link" href="{{ route('profile.edit') }}"><i class="fa fa -cog"></i>Pengaturan</a>
 
-                    <a class="nav-link" href="{{ route('admin.logout') }}"><i class="fa fa-power -off"></i>Logout</a>
+                    <a class="nav-link" href="{{ route('admin.logout') }}"><i
+                            class="fa fa-power -off"></i>Logout</a>
                 </div>
             </div>
 
